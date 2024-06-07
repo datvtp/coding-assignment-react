@@ -27,6 +27,10 @@ export function UpdateTicket() {
   const navigate = useNavigate();
   const [ticket, setTicket] = useState<Ticket>();
 
+  const onGoBack = () => {
+    navigate('/');
+  };
+
   const onCompleteTicket = () => {
     async function addNewTickets() {
       await fetch(`/api/tickets/${id}/complete`, {
@@ -34,14 +38,12 @@ export function UpdateTicket() {
         headers: {
           'Content-Type': 'application/json',
         },
-      }).then();
+      }).then(() => {
+        onGoBack();
+      });
     }
 
     addNewTickets();
-  };
-
-  const onGoBack = () => {
-    navigate('/');
   };
 
   useEffect(() => {

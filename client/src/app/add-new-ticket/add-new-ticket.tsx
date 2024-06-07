@@ -32,7 +32,11 @@ const StyledForm = styled.formBox`
 
 export function AddNewTicket() {
   const navigate = useNavigate();
-  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
+
+  const onGoBack = () => {
+    navigate('/');
+  };
 
   const onSubmit: SubmitHandler<Inputs> = ({ description }) => {
     if (!description) return;
@@ -45,15 +49,11 @@ export function AddNewTicket() {
         },
         body: JSON.stringify({ description }),
       }).then(() => {
-        reset();
+        onGoBack();
       });
     }
 
     addNewTickets();
-  };
-
-  const onGoBack = () => {
-    navigate('/');
   };
 
   return (
