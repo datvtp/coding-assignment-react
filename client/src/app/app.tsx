@@ -8,6 +8,7 @@ import { Text } from '@welcome-ui/text';
 import AddNewTicket from './add-new-ticket/add-new-ticket';
 import TicketDetails from './ticket-details/ticket-details';
 import Tickets from './tickets/tickets';
+import UpdateTicket from './update-ticket/update-ticket';
 
 const theme = createTheme();
 
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/" element={<Tickets />} />
           <Route path="/:id" element={<TicketDetails />} />
           <Route path="/add" element={<AddNewTicket />} />
+          <Route path="/update/:id" element={<UpdateTicket />} />
         </Routes>
       </Box>
     </WuiProvider>
