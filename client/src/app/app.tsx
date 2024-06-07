@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Box } from '@welcome-ui/box';
@@ -6,31 +5,23 @@ import { WuiProvider, createTheme } from '@welcome-ui/core';
 import { CoverLetterIcon } from '@welcome-ui/icons';
 import { Text } from '@welcome-ui/text';
 
-import { Ticket, User } from '@acme/shared-models';
-
+import AddNewTicket from './add-new-ticket/add-new-ticket';
 import TicketDetails from './ticket-details/ticket-details';
 import Tickets from './tickets/tickets';
 
 const theme = createTheme();
 
 const App = () => {
-  const [tickets, setTickets] = useState([] as Ticket[]);
-  const [, setUsers] = useState([] as User[]);
+  // const [, setUsers] = useState([] as User[]);
 
-  useEffect(() => {
-    async function fetchTickets() {
-      const data = await fetch('/api/tickets').then();
-      setTickets(await data.json());
-    }
+  // useEffect(() => {
+  //   async function fetchUsers() {
+  //     const data = await fetch('/api/users').then();
+  //     setUsers(await data.json());
+  //   }
 
-    async function fetchUsers() {
-      const data = await fetch('/api/users').then();
-      setUsers(await data.json());
-    }
-
-    fetchTickets();
-    fetchUsers();
-  }, []);
+  //   fetchUsers();
+  // }, []);
 
   return (
     <WuiProvider theme={theme}>
@@ -47,8 +38,9 @@ const App = () => {
           </Text>
         </Box>
         <Routes>
-          <Route path="/" element={<Tickets tickets={tickets} />} />
+          <Route path="/" element={<Tickets />} />
           <Route path="/:id" element={<TicketDetails />} />
+          <Route path="/add" element={<AddNewTicket />} />
         </Routes>
       </Box>
     </WuiProvider>

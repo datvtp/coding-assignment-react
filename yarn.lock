@@ -3292,7 +3292,7 @@
   dependencies:
     "@welcome-ui/system" "^5.16.2"
 
-"@welcome-ui/button@^5.0.0":
+"@welcome-ui/button@^5.0.0", "@welcome-ui/button@^5.16.2":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/button/-/button-5.16.2.tgz#78d9b0d46d2767311b673e01d8ff3956962d42ba"
   integrity sha512-TJcahnPiCkcYVwjMVR2qWNE96su4a2WCC/PwwKgFm3/2WWUi/fU68MHCvghMzRWn3R4seXkALYOTJs1YM0lDrw==
@@ -3303,6 +3303,15 @@
     "@welcome-ui/system" "^5.16.2"
     "@welcome-ui/utils" "^5.16.2"
 
+"@welcome-ui/clear-button@^5.0.0":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/clear-button/-/clear-button-5.16.2.tgz#361fd4ef9c98e2f9f2fe562aaf379d3bd350b575"
+  integrity sha512-GTLiQ+7jg+/iMOL4VQg123Q/07Ndx2zoWhBxgalK0Zk1sF9MSLJcXAmnuBV1nXnhb06LJsoVDzlpIfX1YrWyXw==
+  dependencies:
+    "@welcome-ui/button" "^5.16.2"
+    "@welcome-ui/icons" "^5.16.2"
+    "@welcome-ui/system" "^5.16.2"
+
 "@welcome-ui/core@^5.0.0":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/core/-/core-5.16.2.tgz#59a8f0399cf5a7195d9ed2917024879f03578aba"
@@ -3311,6 +3320,43 @@
     "@welcome-ui/utils" "^5.16.2"
     ramda "^0.29.0"
 
+"@welcome-ui/field-group@^5.0.0":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/field-group/-/field-group-5.16.2.tgz#69d31b8c71bb63cd3e72284d7e19a96168b914d1"
+  integrity sha512-p0H/DJGu9jzEmlSb22GPE3FWmlYF77k10JhlVf4W4sL8cbzz2t6P3De7H/e6cZpEjWIz5PTsBW4khOELMavnNQ==
+  dependencies:
+    "@welcome-ui/label" "^5.16.2"
+    "@welcome-ui/system" "^5.16.2"
+
+"@welcome-ui/field@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/field/-/field-5.0.0.tgz#4b7bf039a4ffbc4673080f1ebd36e037457e4c55"
+  integrity sha512-OMMSGyWvSxaPx4iAgpkwD4WjCCoiIiGY5rD6rjQY35r8CdepsZkwGRCr93cyoP7AJtuZyT/9NlM2+yNhLy7WoQ==
+  dependencies:
+    "@welcome-ui/field-group" "^5.0.0"
+    "@welcome-ui/hint" "^5.0.0"
+    "@welcome-ui/label" "^5.0.0"
+    "@welcome-ui/system" "^5.0.0"
+    "@welcome-ui/utils" "^5.0.0"
+
+"@welcome-ui/field@^5.0.0":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/field/-/field-5.16.2.tgz#e51d9bb2167612bdde709579f31418ece85a4617"
+  integrity sha512-/aOJoy18GxXIn0c+KtFkESWLr0jFZTCbEwvAORmkUGfLAmpkG6Qteik7aGxs8kew81qKEYPtuVtD2QqgDs+Uwg==
+  dependencies:
+    "@welcome-ui/hint" "^5.16.2"
+    "@welcome-ui/label" "^5.16.2"
+    "@welcome-ui/system" "^5.16.2"
+    "@welcome-ui/utils" "^5.16.2"
+    "@welcome-ui/variant-icon" "^5.16.2"
+
+"@welcome-ui/hint@^5.0.0", "@welcome-ui/hint@^5.16.2":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/hint/-/hint-5.16.2.tgz#bef3685285ee954a8a72182b92194288bee80523"
+  integrity sha512-b42PyYKMJUFdqcvpzs3GevO7ySI+RsUwtNBvyVNQByYy/+tSMRkxgIgkWjdQsSOQJOA0JrQABQtmfpcayR8wTg==
+  dependencies:
+    "@welcome-ui/system" "^5.16.2"
+
 "@welcome-ui/icon@^5.16.2":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icon/-/icon-5.16.2.tgz#1b972c26f473eaf35802db1436a8d9d2828b4dcd"
@@ -3318,12 +3364,32 @@
   dependencies:
     "@welcome-ui/system" "^5.16.2"
 
-"@welcome-ui/icons@^5.0.0":
+"@welcome-ui/icons@^5.0.0", "@welcome-ui/icons@^5.16.2":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icons/-/icons-5.16.2.tgz#b55c565af5986cc47bb328e1026955035e821b95"
   integrity sha512-yozBIkYUDzocyzdfvm7JcnmTT6H+RouBueB7KQdtMPz77WHzA8XWtE6FiGuC+YUmqUy9yWHYHjswNFsH9SNA+Q==
   dependencies:
     "@welcome-ui/icon" "^5.16.2"
+
+"@welcome-ui/input-text@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/input-text/-/input-text-5.0.0.tgz#05840797c31da3932da83bf55d2c3901c163be08"
+  integrity sha512-MZmxg3VZQnhNyKUWVDlSXYV0OlRhGP/Qlb+DAqQtQVjOF9dproCk/SSWGxSuHHl2sQcE+2+UoTLL4T3miUItcg==
+  dependencies:
+    "@welcome-ui/clear-button" "^5.0.0"
+    "@welcome-ui/field" "^5.0.0"
+    "@welcome-ui/system" "^5.0.0"
+    "@welcome-ui/utils" "^5.0.0"
+
+"@welcome-ui/label@^5.0.0", "@welcome-ui/label@^5.16.2":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/label/-/label-5.16.2.tgz#b4c78037212317e74b93bcc2ba2c724dd33a37c0"
+  integrity sha512-zTAoEWKL/mO66KORGprSLEtCZtjL0bK53qCtlD46JeiT0pRvvVJ+svRza7pYTi/r64brOAFPi6dqGnsKgvFLng==
+  dependencies:
+    "@welcome-ui/icons" "^5.16.2"
+    "@welcome-ui/system" "^5.16.2"
+    "@welcome-ui/utils" "^5.16.2"
+    "@welcome-ui/variant-icon" "^5.16.2"
 
 "@welcome-ui/loader@^5.0.0", "@welcome-ui/loader@^5.16.2":
   version "5.16.2"
@@ -3343,7 +3409,7 @@
     "@welcome-ui/system" "^5.16.2"
     "@welcome-ui/utils" "^5.16.2"
 
-"@welcome-ui/system@^5.16.2":
+"@welcome-ui/system@^5.0.0", "@welcome-ui/system@^5.16.2":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/system/-/system-5.16.2.tgz#8ad5cf49e816795568eff9a56bf412f696ef8f87"
   integrity sha512-bC7vogRRskfMc5UJW2etZGKF0QkP5H1w16YDMRHe3IxekNK+tV6miJc0ZUx9MkMOKa8UdSrxVVFgpk5qmKDYbQ==
@@ -3363,10 +3429,20 @@
   dependencies:
     "@welcome-ui/system" "^5.16.2"
 
-"@welcome-ui/utils@^5.16.2":
+"@welcome-ui/utils@^5.0.0", "@welcome-ui/utils@^5.16.2":
   version "5.16.2"
   resolved "https://registry.yarnpkg.com/@welcome-ui/utils/-/utils-5.16.2.tgz#847ebfb6a3c4472a0b473e49c826e36597836c73"
   integrity sha512-+Ri5YkKz/tnWFBdWlfevRGt0funx9jRm51jumvHdpjPI2WvMGIGHRheqBg83O8qsH+5or0euyNydO+R39Lc8CQ==
+
+"@welcome-ui/variant-icon@^5.16.2":
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/variant-icon/-/variant-icon-5.16.2.tgz#c3f926563ab332544d885d00bed6a0abc4b3964d"
+  integrity sha512-oXCZ7aP89RxxOIO3klaWa2qocQxXZiAXiUTPpcZydCJ5Uxk64uU87LWHo0JyjZTbn8s7VxH7A2tpppNgyASsdA==
+  dependencies:
+    "@welcome-ui/box" "^5.16.2"
+    "@welcome-ui/icons" "^5.16.2"
+    "@welcome-ui/system" "^5.16.2"
+    "@welcome-ui/utils" "^5.16.2"
 
 "@xstyled/core@^3.7.3":
   version "3.8.1"
@@ -8915,6 +8991,11 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-hook-form@^7.51.5:
+  version "7.51.5"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.51.5.tgz#4afbfb819312db9fea23e8237a3a0d097e128b43"
+  integrity sha512-J2ILT5gWx1XUIJRETiA7M19iXHlG74+6O3KApzvqB/w8S5NQR7AbU8HVZrMALdmDgWpRPYiZJl0zx8Z4L2mP6Q==
 
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0, react-is@^18.2.0:
   version "18.2.0"

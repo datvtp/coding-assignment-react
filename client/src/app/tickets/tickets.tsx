@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Box } from '@welcome-ui/box';
@@ -8,12 +9,18 @@ import { Text } from '@welcome-ui/text';
 
 import { Ticket } from '@acme/shared-models';
 
-export interface TicketsProps {
-  tickets: Ticket[];
-}
-
-export function Tickets({ tickets }: TicketsProps) {
+export function Tickets() {
   const navigate = useNavigate();
+  const [tickets, setTickets] = useState([] as Ticket[]);
+
+  useEffect(() => {
+    async function fetchTickets() {
+      const data = await fetch('/api/tickets').then();
+      setTickets(await data.json());
+    }
+
+    fetchTickets();
+  }, []);
 
   return (
     <Box w={1} display="flex" alignItems="center" justifyContent="center">
@@ -35,7 +42,7 @@ export function Tickets({ tickets }: TicketsProps) {
             Tickets
           </Text>
 
-          <Button onClick={() => console.log('clicked')}>Add new</Button>
+          <Button onClick={() => navigate('/add')}>Add new</Button>
         </Box>
         <Table>
           <Table.Thead>
