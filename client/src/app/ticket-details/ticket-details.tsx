@@ -3,12 +3,26 @@ import { useParams } from 'react-router-dom';
 
 import { Box } from '@welcome-ui/box';
 import { Text } from '@welcome-ui/text';
+import styled from '@xstyled/styled-components';
 
 import { Ticket } from '@acme/shared-models';
 
+const TicketDetailsContainer = styled(Box)`
+  max-width: 480;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: md;
+  border-color: primary-500;
+  border-radius: lg;
+  padding: md;
+`;
+
 export function TicketDetails() {
-  const [ticket, setTicket] = useState<Ticket>();
   const { id } = useParams();
+  const [ticket, setTicket] = useState<Ticket>();
 
   useEffect(() => {
     if (!id) return;
@@ -26,17 +40,7 @@ export function TicketDetails() {
   }
 
   return (
-    <Box
-      maxW={480}
-      display="flex"
-      flexDirection="column"
-      mx="auto"
-      borderStyle="solid"
-      borderWidth="md"
-      borderColor="primary-500"
-      borderRadius="lg"
-      p="md"
-    >
+    <TicketDetailsContainer>
       <Text variant="h2" color="primary-700" textAlign="center">
         Ticket Details
       </Text>
@@ -52,7 +56,7 @@ export function TicketDetails() {
       <Text>
         <b>Status:</b> {ticket.completed ? 'Completed' : 'Incomplete'}
       </Text>
-    </Box>
+    </TicketDetailsContainer>
   );
 }
 
