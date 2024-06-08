@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Box } from '@welcome-ui/box';
 import { Button } from '@welcome-ui/button';
-import { InformationOutlineIcon, PencilIcon } from '@welcome-ui/icons';
+import { InformationOutlineIcon } from '@welcome-ui/icons';
 import { OptionValue, Select } from '@welcome-ui/select';
 import { Table } from '@welcome-ui/table';
 import { Text } from '@welcome-ui/text';
@@ -121,19 +121,12 @@ export function Tickets() {
                     <Table.Td>
                       {completed ? 'Completed' : 'Incomplete'}
                     </Table.Td>
-                    <Table.Td textAlign="center" spaceX="md">
+                    <Table.Td textAlign="center">
                       <InformationOutlineIcon
                         size="md"
                         color={{ hover: 'primary-700' }}
                         cursor="pointer"
                         onClick={() => navigate(`/${id}`)}
-                      />
-
-                      <PencilIcon
-                        size="md"
-                        color={{ hover: 'primary-700' }}
-                        cursor="pointer"
-                        onClick={() => navigate(`/update/${id}`)}
                       />
                     </Table.Td>
                   </Table.Tr>

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { Box } from '@welcome-ui/box';
 import { Button } from '@welcome-ui/button';
+import { CheckIcon } from '@welcome-ui/icons';
 import { Text } from '@welcome-ui/text';
 import styled from '@xstyled/styled-components';
 
@@ -28,6 +29,21 @@ export function TicketDetails() {
 
   const onGoBack = () => {
     navigate('/');
+  };
+
+  const onCompleteTicket = () => {
+    async function addNewTickets() {
+      await fetch(`/api/tickets/${id}/complete`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then(() => {
+        onGoBack();
+      });
+    }
+
+    addNewTickets();
   };
 
   useEffect(() => {
@@ -63,9 +79,27 @@ export function TicketDetails() {
         <b>Status:</b> {ticket.completed ? 'Completed' : 'Incomplete'}
       </Text>
 
-      <Button variant="tertiary" onClick={onGoBack}>
-        Back
-      </Button>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        mt="md"
+      >
+        <Button
+          w={ticket.completed ? 1 : 1 / 3}
+          variant="tertiary"
+          onClick={onGoBack}
+        >
+          Back
+        </Button>
+
+        {ticket.completed ? null : (
+          <Button onClick={onCompleteTicket}>
+            Complete it
+            <CheckIcon ml="md" />
+          </Button>
+        )}
+      </Box>
     </TicketDetailsContainer>
   );
 }
