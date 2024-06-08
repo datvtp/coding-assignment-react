@@ -88,7 +88,7 @@ export function Tickets() {
                   { label: 'Completed', value: 'completed' },
                   { label: 'Incomplete', value: 'incomplete' },
                 ]}
-                name="welcome"
+                name="filter_by_status"
                 value={filter}
                 onChange={onSelectFilter}
                 placeholder="Select"
