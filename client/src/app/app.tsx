@@ -12,17 +12,6 @@ import Tickets from './tickets/tickets';
 const theme = createTheme();
 
 const App = () => {
-  // const [, setUsers] = useState([] as User[]);
-
-  // useEffect(() => {
-  //   async function fetchUsers() {
-  //     const data = await fetch('/api/users').then();
-  //     setUsers(await data.json());
-  //   }
-
-  //   fetchUsers();
-  // }, []);
-
   return (
     <WuiProvider theme={theme}>
       <Box p="md">
